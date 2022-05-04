@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="public/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="public/css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" href="public/css/style.css" />
+  <link rel="stylesheet" href="public/css/mining-app.css" />
+
+  <script defer src="main.js"></script>
+  <style>
+    table, th, td {
+      border: 0px solid white;
+      border-collapse: collapse;
+      position: relative;
+    }
+    th, td {
+      padding: 2px;
+    }
+    </style>
+</head>
+
+<body>
+    <table style="width:100%">
+      <div class="main">
+        <form onsubmit="event.preventDefault();">
+        
+            <tr><td style="width:80px; text-align: left;">
+              <button id="startStopBtn" type="submit" class="submit button-shine">Start</button>
+            </td>
+  
+            <td style="text-align: left;">
+              <!--<span class="hashrate">-->
+                <span id="hasrateParagraph" class="white-text"></span>
+              </br>
+                <span class="blue-text">HASHRATE 10s/60s/15m/MAX</span>
+              <!--</span>-->
+            </td>
+            </tr>
+
+            <tr>
+              <td> <span style="color: #fff;">#CPU: </span></br>
+                <span><select name="cores" id="cpuUsage"
+                  title="Choose how much CPU power you want to use for mining. This may not work properly on some CPU's / Platforms">
+                </select></span> 
+      
+              </td>
+              <td>
+                <span>
+                  <span class="blue-text-cpu-model">CPU Model: </span> 
+                  </span>
+                
+                  <span class="white-text-cpu-model" id="cpuModel"></span>
+                </span>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <select class="button-shine pool-url" name="pool" id="pool" title="Choose the pool you want to connect to">
+                  <option>pool.safex.org:3311</option>
+                  <option>eu.pool.safex.ninja:3311</option>
+                  <option selected="true">usa.pool.safex.ninja:3311</option>
+                  <option>aus.pool.safex.ninja:3311</option>
+                </select>      
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <span class="address-wrap">
+                  <textarea rows="2" style="width:100%" type="text" placeholder="Safex Address" name="miningAddress" id="miningAddress"
+                    title="Your Safex Address"></textarea>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <span class="miner-name-wrap">
+                  <input class="white-text" type="text" placeholder="Miner name (Optional)" name="minerName" id="minerName"
+                    title="Your miner name" />
+                </span>      
+              </td>
+            </tr>
+
+
+
+        </form>
+      </table> 
+
+    <!--  <img src="public/images/logo.png" class="animated fadeIn" alt="Logo" />-->
+</body>
+
+</html>
